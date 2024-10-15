@@ -8,6 +8,7 @@ body{
     padding: 2px 10px;
     border-radius: 10px;
     height: 90vh;
+    position: relative;
 }
 header{
     display: flex;
@@ -51,4 +52,66 @@ header div img{
     background-color: black;
     height: 2px;
     border-radius: px;
+}
+#ebooklist li img{
+    width: 50%;
+    object-fit: scale-down;
+}
+ul{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: auto;
+    gap: 5px;
+}
+#ebooklist li{
+    position: relative;
+    height: 150px;
+    display: flex;
+    gap: 10px;
+    border:2px solid black;
+    padding-right: 2px;
+}
+#ebooklist li button{
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    color: black;
+    font-weight: bold;
+    border-radius: 25px;
+    border: 2px solid black;
+    padding: 5px 20px;
+    transition: 0.2s;
+}
+#ebooklist li button:hover{
+    background-color: lightgray;
+    transition: 0.2s;
+}
+#ebooklist li button:active {
+    transition: 0.2s;
+    transform: scale(0.98); /* Add click effect */
+}
+#ebooklist li h3{
+    margin: 5px;
+    font-size: medium;
+    max-width: 100%;
+    max-height: 75%;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+}
+.audioholder{
+    display: flex;
+    justify-content: center;
+}
+#player{
+    position: absolute;
+    bottom: 0;
+    margin: 10px;
+    width: 90%;
+    height: 50px;
+    border: 2px solid black;
+    border-radius: 25px;
+}
+.sound-name {
+    font-weight: bold;
+    margin-top: 10px;
 }
